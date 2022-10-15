@@ -1,7 +1,7 @@
 void Main()
 {
     Console.WriteLine((int)(254 / Math.Pow(10, 2)));
-    Console.Write("Введите число: ");
+    Console.Write("Р’РІРµРґРёС‚Рµ С‡РёСЃР»Рѕ: ");
     int A = int.Parse(Console.ReadLine());
     int number_of_digits = NumberOfDigits(A);
     int sum_of_digits = SumOfDigits(A, number_of_digits);
@@ -10,14 +10,14 @@ void Main()
 
 void Main(){
     Console.WriteLine( (int)(254 / Math.Pow(10, 2)) );
-    Console.Write("Введите число: ");
+    Console.Write("Р’РІРµРґРёС‚Рµ С‡РёСЃР»Рѕ: ");
     int A = int.Parse(Console.ReadLine());
     int number_of_digits = NumberOfDigits(A);
     int sum_of_digits = SumOfDigits(A, number_of_digits);
     Console.WriteLine( sum_of_digits );    
 }
 
-int NumberOfDigits(int A) {//находит количество цифр = (number_of_digits)
+int NumberOfDigits(int A) {//РЅР°С…РѕРґРёС‚ РєРѕР»РёС‡РµСЃС‚РІРѕ С†РёС„СЂ = (number_of_digits)
     int number_of_digits = 1;
     bool i = true;
     while (i)
@@ -32,14 +32,14 @@ int NumberOfDigits(int A) {//находит количество цифр = (number_of_digits)
     return number_of_digits;
 }
 
-int SumOfDigits(int A, int number_of_digits) {//находит сумму цифр = (sum_of_digits)
+int SumOfDigits(int A, int number_of_digits) {//РЅР°С…РѕРґРёС‚ СЃСѓРјРјСѓ С†РёС„СЂ = (sum_of_digits)
     int sum_of_digits = 0;
-    int j = 0; // цифры числа
+    int j = 0; // С†РёС„СЂС‹ С‡РёСЃР»Р°
     
-    for (int i = number_of_digits-1; i > -1; i--)//находим каждую цифру и прибавляем ее к sum_of_digits
+    for (int i = number_of_digits-1; i > -1; i--)//РЅР°С…РѕРґРёРј РєР°Р¶РґСѓСЋ С†РёС„СЂСѓ Рё РїСЂРёР±Р°РІР»СЏРµРј РµРµ Рє sum_of_digits
     {
-        j = Convert.ToInt32((int)(A / Math.Pow(10, i)) -  Convert.ToInt32( (int)(A / Math.Pow(10, i+1)) ) *  10 );//находим каждую цифру
-        sum_of_digits += j;//цифру прибавляем к sum_of_digits
+        j = Convert.ToInt32((int)(A / Math.Pow(10, i)) -  Convert.ToInt32( (int)(A / Math.Pow(10, i+1)) ) *  10 );//РЅР°С…РѕРґРёРј РєР°Р¶РґСѓСЋ С†РёС„СЂСѓ
+        sum_of_digits += j;//С†РёС„СЂСѓ РїСЂРёР±Р°РІР»СЏРµРј Рє sum_of_digits
     } 
     return sum_of_digits;
 }

@@ -1,17 +1,17 @@
-// Задача 29: Напишите программу, которая задаёт массив из 8 элементов и выводит их на экран.
-// 1, 2, 5, 7, 19 -> [1, 2, 5, 7, 19]
-// 6, 1, 33 -> [6, 1, 33]
+// Р—Р°РґР°С‡Р° 29: РќР°РїРёС€РёС‚Рµ РїСЂРѕРіСЂР°РјРјСѓ, РєРѕС‚РѕСЂР°СЏ Р·Р°РґР°С‘С‚ РјР°СЃСЃРёРІ РёР· 8 СЌР»РµРјРµРЅС‚РѕРІ Рё РІС‹РІРѕРґРёС‚ РёС… РЅР° СЌРєСЂР°РЅ.
+// 1, 2, 5, 7, 19, 2, 4, 9 -> [1, 2, 5, 7, 19, 2, 4, 9]
+// 6, 1, 33, 2, 93, 15, 424, 0 -> [6, 1, 33, 2, 93, 15, 424, 0]
 
 void Main()
 {
-    Console.Write("Введите ряд чисел, разделенных запятой: ");
+    Console.Write("Р’РІРµРґРёС‚Рµ СЂСЏРґ С‡РёСЃРµР», СЂР°Р·РґРµР»РµРЅРЅС‹С… Р·Р°РїСЏС‚РѕР№: ");
     string? seriesOfNumbers = Console.ReadLine();
-    seriesOfNumbers = seriesOfNumbers + ",";    //обозначения конца строки
+    seriesOfNumbers = seriesOfNumbers + ",";    //РѕР±РѕР·РЅР°С‡РµРЅРёСЏ РєРѕРЅС†Р° СЃС‚СЂРѕРєРё
     string seriesNew = RemovingSpaces(seriesOfNumbers);
     int[] arrayOfNumbers = ArrayOfNumbers(seriesNew);
     PrintArry(arrayOfNumbers);
 }
-// функция удаления пробелов из строки 
+// С„СѓРЅРєС†РёСЏ СѓРґР°Р»РµРЅРёСЏ РїСЂРѕР±РµР»РѕРІ РёР· СЃС‚СЂРѕРєРё 
 string RemovingSpaces(string series)
 {
     string seriesNew = "";
@@ -24,11 +24,11 @@ string RemovingSpaces(string series)
     }
     return seriesNew;
 }
-// функция  создания и заполнения массива из строки
+// С„СѓРЅРєС†РёСЏ  СЃРѕР·РґР°РЅРёСЏ Рё Р·Р°РїРѕР»РЅРµРЅРёСЏ РјР°СЃСЃРёРІР° РёР· СЃС‚СЂРѕРєРё
 int[] ArrayOfNumbers(string seriesNew)
 {
 
-    int[]? arrayOfNumbers = new int[1];    // инициализация массива из 1 элемента
+    int[]? arrayOfNumbers = new int[1];    // РёРЅРёС†РёР°Р»РёР·Р°С†РёСЏ РјР°СЃСЃРёРІР° РёР· 1 СЌР»РµРјРµРЅС‚Р°
 
     int j = 0;
 
@@ -41,16 +41,16 @@ int[] ArrayOfNumbers(string seriesNew)
             seriesNew1 += seriesNew[i];
             i++;
         }
-        arrayOfNumbers[j] = Convert.ToInt32(seriesNew1);    // заполняет массив значениями из строки  
+        arrayOfNumbers[j] = Convert.ToInt32(seriesNew1);    // Р·Р°РїРѕР»РЅСЏРµС‚ РјР°СЃСЃРёРІ Р·РЅР°С‡РµРЅРёСЏРјРё РёР· СЃС‚СЂРѕРєРё  
         if (i < seriesNew.Length - 1)
         {
-            arrayOfNumbers = arrayOfNumbers.Concat(new int[] { 0 }).ToArray();    // добавляет новый нулевой элемент в конец массива
+            arrayOfNumbers = arrayOfNumbers.Concat(new int[] { 0 }).ToArray();    // РґРѕР±Р°РІР»СЏРµС‚ РЅРѕРІС‹Р№ РЅСѓР»РµРІРѕР№ СЌР»РµРјРµРЅС‚ РІ РєРѕРЅРµС† РјР°СЃСЃРёРІР°
         }
         j++;
     }
     return arrayOfNumbers;
 }
-//вывод массива
+//РІС‹РІРѕРґ РјР°СЃСЃРёРІР°
 void PrintArry(int[] coll)
 {
     int count = coll.Length;
