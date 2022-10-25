@@ -1,18 +1,4 @@
-void Main()
-{
-    Console.WriteLine((int)(254 / Math.Pow(10, 2)));
-    Console.Write("Введите число: ");
-    int A = int.Parse(Console.ReadLine());
-    int number_of_digits = NumberOfDigits(A);
-    int sum_of_digits = SumOfDigits(A, number_of_digits);
-    Console.WriteLine(sum_of_digits);
-}
 
-void Main(){
-    Console.WriteLine( (int)(254 / Math.Pow(10, 2)) );
-    Console.Write("Введите число: ");
-    int A = int.Parse(Console.ReadLine());
-    int number_of_digits = NumberOfDigits(A);
 //  Задача 36: Задайте одномерный массив, заполненный случайными числами.
 //  Найдите сумму элементов, стоящих на нечётных позициях.
 //  [3, 7, 23, 12] -> 19
